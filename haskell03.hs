@@ -56,6 +56,8 @@ countShorts listaPalavras =length [ x| x <- listaPalavras, length x < 5]
 
 
 --13) Escreva uma função trSpaces :: String -> String, que receba uma string e converta espaços (' ') em traços ('-'). Use list comprehension.
+trSpaces :: String -> String
+trSpaces string =  [if x == ' ' then '-' else x | x <- string]
 
 --14) Usando list comprehension, Defina uma função selectSnd :: [(Int,Int)] -> [Int], que receba uma lista de tuplas e selecione somente os segundos elementos dessas tuplas, produzindo outra lista. Exemplo:
 
