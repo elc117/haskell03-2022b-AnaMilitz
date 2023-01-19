@@ -43,17 +43,8 @@ countShorts :: [String] -> Int
 countShorts listaPalavras =length [ x| x <- listaPalavras, length x < 5] 
 
 --12) Escreva uma função calcExpr :: [Float] -> [Float], que calcule x^2/2 para cada elemento x da lista de entrada e selecione apenas os resultados que forem maiores que 10. Use list comprehension.
---calcExpr :: [Float] -> [Float]
---calcExpr listaEntrada = [ x^2/2 | x <- listaEntrada] 
-
---calcExpr :: [Float] -> [Float]
---calcExpr listaEntrada = [if x^2/2>10 then listaEntrada^2] 
-
-
---filterImg :: [Int] -> [Int]
---filterImg bitmap = 
---[if pixel < 10 then 0 else pixel | pixel <- bitmap]
-
+calcExpr :: [Float] -> [Float]
+calcExpr listaEntrada = [ x | x <- listaEntrada, x^2/2> 10]
 
 --13) Escreva uma função trSpaces :: String -> String, que receba uma string e converta espaços (' ') em traços ('-'). Use list comprehension.
 trSpaces :: String -> String
