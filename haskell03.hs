@@ -51,5 +51,9 @@ trSpaces :: String -> String
 trSpaces string =  [if x == ' ' then '-' else x | x <- string]
 
 --14) Usando list comprehension, Defina uma função selectSnd :: [(Int,Int)] -> [Int], que receba uma lista de tuplas e selecione somente os segundos elementos dessas tuplas, produzindo outra lista. Exemplo:
+selectSnd :: [(Int,Int)] -> [Int]
+selectSnd listaTuplas = [snd x | x <- listaTuplas] 
 
 --15) Em Haskell, a função zip combina elementos de duas listas, produzindo uma lista de tuplas. Usando a função zip com list comprehension e outras funções auxiliares, escreva uma função dotProd :: [Int] -> [Int] -> Int que calcule o somatório dos produtos dos pares de elementos de duas listas, conforme o exemplo:
+dotProd :: [Int] -> [Int] -> Int
+dotProd lista1 lista2 = sum [x*y | (x,y) <- zip lista1 lista2] 
